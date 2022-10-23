@@ -85,12 +85,7 @@ int main(){
                 c[i].final_amount=0;
                 c[i].principal_rp=c[i-1].final_amount;
             }
-        }
-        else{ //When everything is done 当一切结束后
-            c[i].rate_pt=0;
-            c[i].repayment=0;
-            c[i].final_amount=0;
-            c[i].principal_rp=0;
+            break;
         }
     }
     //output
