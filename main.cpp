@@ -10,7 +10,7 @@ struct compound
     int repayment;
 };
 int main(){
-    int inital,repayment;
+    int inital,repayment,bp=1000;
     bool repayment_change=0,lump_sum=0,interest_change=0;
     double intre_rate;
     
@@ -84,13 +84,14 @@ int main(){
                 c[i].repayment+=c[i].final_amount;
                 c[i].final_amount=0;
                 c[i].principal_rp=c[i-1].final_amount;
+                bp=i;
+                break;
             }
-            break;
         }
     }
     //output
     printf("Month\tInterest\t Repayment\t  Principal\t\tFinal amount\n");
-    for (int i=0; i<1000; i++) {
+    for (int i=0; i<=bp; i++) {
         cout<<i+1<<"\t\t";
         printf("%.2f\t\t ",c[i].rate_pt);
         printf("%d\t\t  ",c[i].repayment);
