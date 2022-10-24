@@ -1,3 +1,39 @@
+/*
+Created by Paul-1437. Avaliable on github.
+essential input 必须输入
+1. input amount borrowed 输入贷款金额
+2. input interest p.a. 输入年利息
+3. input monthly repayment 输入月还款量
+4. input if there's repayment changes 输入是还款是否变化
+5. input if there's a lump sum 输入是否有一次性还款
+6. input if there's intrrest change 输入利息是否会改变
+input different varibles with space or enter (200 0.01 10 0 0 0, etc.)
+不同变量的输入以空格或换行为间隔
+
+customized input
+if the value of variable4 is more than 0,
+input when to change monthly repayment and the value after change
+input (the value of variable4) rounds above
+ 
+Then, if the value of variable5 is more than 0,
+input when to change monthly repayment and the value after change
+input (the value of variable5) rounds above
+
+Finally, if the value of variable6 is more than 0,
+input when to change monthly repayment and the value after change
+input (the value of variable6) rounds above
+
+自定义输入
+如果变量4的值大于0，
+则输入几个月后变化和变化后的数值
+上述两个变量输入(变量4的值)轮
+然后如果变量5的值大于0，
+则输入几个月后变化和变化后的数值
+上述两个变量输入(变量4的值)轮
+最终如果变量6的值大于0，
+则输入几个月后变化和变化后的数值
+上述两个变量输入(变量4的值)轮
+*/
 #include <iostream>
 #include <cstdio>
 using namespace std;
@@ -27,41 +63,6 @@ int main(){
     interest_c in[50];
     lump l[50];
     double intre_rate;
-    
-    /*essential input 必须输入
-    1. input amount borrowed 输入贷款金额
-    2. input interest p.a. 输入年利息
-    3. input monthly repayment 输入月还款量
-    4. input if there's repayment changes 输入是还款是否变化
-    5. input if there's a lump sum 输入是否有一次性还款
-    6. input if there's intrrest change 输入利息是否会改变
-    input different varibles with space or enter (200 0.01 10 0 0 0, etc.)
-    不同变量的输入以空格或换行为间隔
-    
-    customized input
-    if the value of variable4 is more than 0,
-    input when to change monthly repayment and the value after change
-    input (the value of variable4) rounds above
-     
-    Then, if the value of variable5 is more than 0,
-    input when to change monthly repayment and the value after change
-    input (the value of variable5) rounds above
-    
-    Finally, if the value of variable6 is more than 0,
-    input when to change monthly repayment and the value after change
-    input (the value of variable6) rounds above
-    
-    自定义输入
-    如果变量4的值大于0，
-    则输入几个月后变化和变化后的数值
-    上述两个变量输入(变量4的值)轮
-    然后如果变量5的值大于0，
-    则输入几个月后变化和变化后的数值
-    上述两个变量输入(变量4的值)轮
-    最终如果变量6的值大于0，
-    则输入几个月后变化和变化后的数值
-    上述两个变量输入(变量4的值)轮
-    */
     cin>>inital>>intre_rate>>repayment;
     cin>>repayment_change>>lump_sum>>interest_change;
      
