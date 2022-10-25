@@ -1,5 +1,6 @@
 /*Created by Paul-1437, avaliable on Github
-input, the only thing you need to do
+This is the simplified program.
+You only need to input: 你只需要输入：
 1. input amount borrowed 输入贷款金额
 2. input interest p.a. 输入年利息
 3. input monthly repayment 输入月还款量
