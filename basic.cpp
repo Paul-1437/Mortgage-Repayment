@@ -1,11 +1,15 @@
 /*Created by Paul-1437, avaliable on Github
 This is the simplified program.
-You only need to input: 你只需要输入：
-1. input amount borrowed 输入贷款金额
-2. input interest p.a. 输入年利息
-3. input monthly repayment 输入月还款量
- input different varibles with space or enter
- 不同变量的输入以空格或换行为间隔
+You only need to input 3 varibles:
+1. input amount borrowed
+2. input interest p.a.
+3. input monthly repayment
+你只需要输入3个变量：
+1.输入贷款金额
+2.输入年利息
+3.输入月还款量
+input different varibles with space or enter
+不同变量的输入以空格或换行为间隔
 输入样例 input sample: 20000 0.01 1000
 */
 #include <iostream>

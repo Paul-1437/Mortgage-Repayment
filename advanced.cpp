@@ -1,5 +1,7 @@
 /*
 Created by Paul-1437. Avaliable on github.
+This is a project for calculating mortgage repayment(personal loans). This code is the advanced version. The way to input varibles might be difficult for people who have coding experience. If you found it too hard, try basic.cpp. IDE is required to run the code.
+这是一个计算个人贷款的微型工程，此文件是是高级版程序，复杂的输入程序可能会使没有接触过编程的小伙伴觉得困难。如有不适请移步至basic.cpp。你需要IDE以运行该程序
 essential input 必须输入
 1. input amount borrowed 输入贷款金额
 2. input interest p.a. 输入年利息
