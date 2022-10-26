@@ -2,39 +2,50 @@
 Created by Paul-1437. Avaliable on github.
 This is a project for calculating mortgage repayment(personal loans). This code is the advanced version. The way to input varibles might be difficult for people who have coding experience. If you found it too hard, try basic.cpp. IDE is required to run the code.
 这是一个计算个人贷款的微型工程，此文件是是高级版程序，复杂的输入程序可能会使没有接触过编程的小伙伴觉得困难。如有不适请移步至basic.cpp。你需要IDE以运行该程序
-essential input 必须输入
-1. input amount borrowed 输入贷款金额
-2. input interest p.a. 输入年利息
-3. input monthly repayment 输入月还款量
-4. input if there's repayment changes 输入是还款是否变化
-5. input if there's a lump sum 输入是否有一次性还款
-6. input if there's intrrest change 输入利息是否会改变
+essential input
+1. input amount borrowed
+2. input interest p.a.
+3. input monthly repayment
+4. input if there's repayment changes
+5. input if there's a lump sum
+6. input if there's intrrest change
 input different varibles with space or enter (200 0.01 10 0 0 0, etc.)
 不同变量的输入以空格或换行为间隔
 
-customized input
-if the value of variable4 is more than 0,
+The input below depends on input 4,5 and 6.
+if the value of input4 is more than 0,
 input when to change monthly repayment and the value after change
-input (the value of variable4) rounds above
+input (the value of input4) rounds above
  
-Then, if the value of variable5 is more than 0,
+Then, if the value of input5 is more than 0,
 input when to change monthly repayment and the value after change
-input (the value of variable5) rounds above
+input (the value of input5) rounds above
 
-Finally, if the value of variable6 is more than 0,
+Finally, if the value of input6 is more than 0,
 input when to change monthly repayment and the value after change
-input (the value of variable6) rounds above
+input (the value of input6) rounds above
 
-自定义输入
-如果变量4的值大于0，
-则输入几个月后变化和变化后的数值
-上述两个变量输入(变量4的值)轮
-然后如果变量5的值大于0，
-则输入几个月后变化和变化后的数值
-上述两个变量输入(变量4的值)轮
-最终如果变量6的值大于0，
-则输入几个月后变化和变化后的数值
-上述两个变量输入(变量4的值)轮
+必要输入
+1.输入贷款金额
+2.输入年利息
+3.输入月还款量
+4.输入还款是否变化
+5.输入是否有一次性还款
+6.输入利息是否会改变
+
+根据(输入4，输入5和输入6)的值进行下列输入
+
+如果输入4的值大于0，
+则输入 几个月后变化 和 变化后的数值
+上述两个变量输入(输入4的值)轮
+ 
+如果输入5的值大于0，
+则输入 几个月后变化 和 变化后的数值
+上述两个变量输入(输入5的值)轮
+
+如果输入6的值大于0，
+则输入 几个月后变化 和 变化后的数值
+上述两个变量输入(输入6的值)轮
 */
 #include <iostream>
 #include <cstdio>
@@ -59,12 +70,12 @@ struct lump{
     int change_to;
 };
 int main(){
-    int inital,repayment,bp=1000;
+    int inital,repayment;
     int repayment_change=0,lump_sum=0,interest_change=0;
     repay_c r[50];
     interest_c in[50];
     lump l[50];
-    double intre_rate;
+    double intre_rate,bp=1000;
     cin>>inital>>intre_rate>>repayment;
     cin>>repayment_change>>lump_sum>>interest_change;
      
@@ -135,5 +146,8 @@ int main(){
         printf("%.2f",c[i].final_amount);
         cout<<endl;
     }
+    cout<<"Months to repay: "<<++bp<<endl;
+    bp/=12;
+    printf("Years to repay: %.6f\n", bp);
     return 0;
 }

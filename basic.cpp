@@ -23,8 +23,8 @@ struct compound
     int repayment;
 };
 int main(){
-    int inital,repayment,bp=1000;
-    double intre_rate;
+    int inital,repayment;
+    double intre_rate,bp=1000;
     cin>>inital>>intre_rate>>repayment;
     intre_rate/=12; //monthly intrest cal 计算月利息
     
@@ -63,5 +63,8 @@ int main(){
         printf("%.2f",c[i].final_amount);
         cout<<endl;
     }
+    cout<<"Months to repay: "<<++bp<<endl;
+    bp/=12;
+    printf("Years to repay: %.6f\n", bp);
     return 0;
 }
