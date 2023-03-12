@@ -2,50 +2,10 @@
 Created by Paul-1437. Avaliable on github.
 This is a project for calculating mortgage repayment(personal loans). This code is the advanced version. The way to input varibles might be difficult for people who have coding experience. If you found it too hard, try basic.cpp. IDE is required to run the code.
 这是一个计算个人贷款的微型工程，此文件是是高级版程序，复杂的输入程序可能会使没有接触过编程的小伙伴觉得困难。如有不适请移步至basic.cpp。你需要IDE以运行该程序
-essential input
-1. input amount borrowed
-2. input interest p.a.
-3. input monthly repayment
-4. input if there's repayment changes
-5. input if there's a lump sum
-6. input if there's intrrest change
+
 input different varibles with space or enter (200 0.01 10 0 0 0, etc.)
 不同变量的输入以空格或换行为间隔
 
-The input below depends on input 4,5 and 6.
-if the value of input4 is more than 0,
-input when to change monthly repayment and the value after change
-input (the value of input4) rounds above
- 
-Then, if the value of input5 is more than 0,
-input when to change monthly repayment and the value after change
-input (the value of input5) rounds above
-
-Finally, if the value of input6 is more than 0,
-input when to change monthly repayment and the value after change
-input (the value of input6) rounds above
-
-必要输入
-1.输入贷款金额
-2.输入年利息
-3.输入月还款量
-4.输入还款是否变化
-5.输入是否有一次性还款
-6.输入利息是否会改变
-
-根据(输入4，输入5和输入6)的值进行下列输入
-
-如果输入4的值大于0，
-则输入 几个月后变化 和 变化后的数值
-上述两个变量输入(输入4的值)轮
- 
-如果输入5的值大于0，
-则输入 几个月后变化 和 变化后的数值
-上述两个变量输入(输入5的值)轮
-
-如果输入6的值大于0，
-则输入 几个月后变化 和 变化后的数值
-上述两个变量输入(输入6的值)轮
 */
 #include <iostream>
 #include <cstdio>
@@ -76,23 +36,42 @@ int main(){
     interest_c in[50];
     lump l[50];
     double intre_rate,bp=1000;
-    cin>>inital>>intre_rate>>repayment;
-    cin>>repayment_change>>lump_sum>>interest_change;
+    cout<<"Input amount borrowed"<<endl;
+    cin>>inital;
+    cout<<"input interest rate p.a."<<endl;
+    cin>>intre_rate;
+    cout<<"input monthly repayment"<<endl;
+    cin>>repayment;
+    cout<<"input how many repayment changes (0=no changes)"<<endl;
+    cin>>repayment_change;
+    cout<<"input how many lump sum (0=no changes)"<<endl;
+    cin>>lump_sum;
+    cout<<"input how many interest changes (0=no changes)"<<endl;
+    cin>>interest_change;
      
     intre_rate/=12; //monthly intrest cal 计算月利息
     for (int i=0; i<repayment_change; i++){
     //if monthly repayment needs to change 如果要改变月还款量
-        cin>>r[i].after_months>>r[i].change_to;
-        //input changed value and when to change 输入何时执行和改变后的值
+        cout<<"input changed value"<<endl;
+        cin>>r[i].after_months;
+        cout<<"input which month"<<endl;
+        cin>>r[i].change_to;
+        //input changed value and which month to change 输入何时执行和改变后的值
     }
     for (int i=0; i<lump_sum; i++){ //if there's a lump sum 如果要执行一次性还款
-        cin>>l[i].after_months>>l[i].change_to;
-        //input lump sum value and when to change 输入何时执行和改变后的值
+        cout<<"input lump sum value"<<endl;
+        cin>>l[i].after_months;
+        cout<<"input which month"<<endl;
+        cin>>l[i].change_to;
+        //input lump sum value and which month to change 输入何时执行和改变后的值
     }
     for (int i=0; i<interest_change; i++){ //if instest (p.a.) needs to change 如果要改变年利息
-        cin>>in[i].after_months>>in[i].change_to;
+        cout<<"input changed intest"<<endl;
+        cin>>in[i].after_months;
+        cout<<"input which month"<<endl;
+        cin>>in[i].change_to;
         in[i].change_to/=12;
-        //input changed value and when to change 输入何时执行和改变后的值
+        //input changed value and which month to change 输入何时执行和改变后的值
     }
     compound c[1000];
     //initialization 初始化

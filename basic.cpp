@@ -25,7 +25,12 @@ struct compound
 int main(){
     int inital,repayment;
     double intre_rate,bp=1000;
-    cin>>inital>>intre_rate>>repayment;
+    cout<<"enter initial value"<<endl;
+    cin>>inital;
+    cout<<"enter interest rate"<<endl;
+    cin>>intre_rate;
+    cout<<"enter how much you pay monthly"<<endl;
+    cin>>repayment;
     intre_rate/=12; //monthly intrest cal 计算月利息
     
     compound c[1000];
